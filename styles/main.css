@@ -413,7 +413,7 @@ template {
 }
 
 .page__body {
-  font-size: clamp(0.875rem, 0.8112745098rem + 0.2614379085vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.7944214876rem + 0.3305785124vw, 1.125rem);
   margin: 0;
   min-width: 390px;
   min-height: 100%;
