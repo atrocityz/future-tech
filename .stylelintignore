@@ -1,3 +1,4 @@
 styles/*.css
 styles/helpers/*.scss
+styles/_normalize.scss
 styles/_variables.scss

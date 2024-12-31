@@ -3,18 +3,18 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "sass-watch": "sass --watch ."
+    "sass-watch": "sass --watch --style=compressed ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atrocityz/futuretech-site.git"
+    "url": "git+https://github.com/atrocityz/future-tech.git"
   },
   "author": "atrocityz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/atrocityz/futuretech-site/issues"
+    "url": "https://github.com/atrocityz/future-tech/issues"
   },
-  "homepage": "https://github.com/atrocityz/futuretech-site#readme",
+  "homepage": "https://github.com/atrocityz/future-tech#readme",
   "description": "",
   "devDependencies": {
     "sass": "^1.83.0",
