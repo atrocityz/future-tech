@@ -1,0 +1,24 @@
+{
+  "name": "futuretech",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "sass-watch": "sass --watch ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atrocityz/futuretech-site.git"
+  },
+  "author": "atrocityz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atrocityz/futuretech-site/issues"
+  },
+  "homepage": "https://github.com/atrocityz/futuretech-site#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.83.0",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard-scss": "^14.0.0"
+  }
+}

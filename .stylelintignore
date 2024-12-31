@@ -1,0 +1,3 @@
+styles/*.css
+styles/helpers/*.scss
+styles/_variables.scss
