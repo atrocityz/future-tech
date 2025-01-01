@@ -5,13 +5,17 @@
   font-family: var(--font-family-base);
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+
+  &.is-lock {
+    overflow: hidden;
+  }
 }
 
 .page__body {
   @include fluid-text(18, 14);
 
   margin: 0;
-  min-width: 390px;
+  min-width: 360px;
   min-height: 100%;
   letter-spacing: -0.03em;
   color: var(--color-gray-50);
@@ -29,10 +33,6 @@ a {
   &[class] {
     text-decoration: none;
   }
-}
-
-.site-container {
-  overflow: hidden;
 }
 
 .btn-reset {
@@ -78,6 +78,7 @@ a {
 
 .link {
   color: inherit;
+  transition-duration: var(--transition-duration);
 
   @include hover {
     color: var(--color-accent);
@@ -89,4 +90,21 @@ a {
   outline-offset: rem(4);
   /* stylelint-disable-next-line declaration-no-important */
   transition-duration: 0s !important;
+}
+
+.link, .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+      
+      content: "";
+    }
+  }
 }
