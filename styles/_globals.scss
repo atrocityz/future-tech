@@ -14,6 +14,8 @@
 .page__body {
   @include fluid-text(18, 14);
 
+  display: flex;
+  flex-direction: column;
   margin: 0;
   min-width: 360px;
   min-height: 100%;
@@ -21,6 +23,11 @@
   color: var(--color-gray-50);
   background-color: var(--color-dark);
 }
+
+.main {
+  flex-grow: 1;
+}
+
 
 img {
   display: block;
@@ -83,6 +90,10 @@ a {
   @include hover {
     color: var(--color-accent);
   }
+
+  svg {
+    fill: currentcolor;
+  }
 }
 
 :focus-visible {
@@ -93,7 +104,7 @@ a {
 }
 
 .link, .btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
