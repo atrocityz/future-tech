@@ -1,0 +1,84 @@
+@use '../helpers' as *;
+
+.advantages-card {
+  display:grid;
+  row-gap: rem(30);
+
+  @include laptop {
+    row-gap: rem(20);
+  }
+
+  @include mobile {
+    row-gap: rem(14);
+  }
+
+  &__img {
+    --iconSize: #{rem(50)};
+
+    @include square(var(--iconSize));
+
+    @include laptop {
+      --iconSize: #{rem(40)};
+    }
+
+    @include mobile {
+      --iconSize: #{rem(30)};
+    }
+  }
+
+  &__link {
+    --circleSize: #{rem(52)};
+    --circleMarginLeft: #{rem(20)};
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: calc(var(--circleMarginLeft) + var(--circleSize));
+    row-gap: rem(4);
+
+    @include laptop {
+      --circleMarginLeft: #{rem(14)};
+      --circleSize: #{rem(44)};
+
+
+      row-gap: rem(2);
+    }
+
+    @include mobile {
+      --circleSize: #{rem(40)};
+    }
+
+    &::after {
+      @include square(var(--circleSize));
+      @include abs-y;
+
+      content: "";
+      right: 0;
+      border-radius: 50%;
+      background-image: url('../../icons/arrow-top-right-black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__title {
+    @include fluid-text(20,16)
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__details {
+    margin: 0;
+    font-family: var(--font-family-accent);
+    font-size: rem(20);
+    color: var(--color-gray-60);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+  }
+}
