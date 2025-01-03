@@ -3,6 +3,8 @@
 @use 'variables';
 @use 'utils';
 @use 'globals';
+
+// Blocks
 @use './blocks/icon';
 @use './blocks/logo';
 @use './blocks/btn';
@@ -16,7 +18,12 @@
 @use './blocks/team';
 @use './blocks/advantages-card';
 @use './blocks/hero';
+@use './blocks/tag';
+@use './blocks/section';
+@use './blocks/list';
+@use './blocks/tile';
+@use './blocks/card';
 
-// .header, .footer {
+// .header, .footer, main > *:not(:last-child) {
 //   display: none;
 // }

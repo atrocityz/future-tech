@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.section {
+  &__header {
+    background-color: var(--color-dark-10);
+    padding-block: fluid(120,40);
+
+    &-info {
+      display: grid;
+      align-items: start;
+      row-gap: rem(16);
+
+      @include laptop {
+        row-gap: rem(10);
+      }
+    }
+  }
+
+  &__title {
+    @include fluid-text(58,28);
+    
+    line-height: 130%;
+  }
+
+  &__subtitle {
+    justify-self: start;
+    margin: 0;
+  }
+
+  &__body {
+    border-block: var(--border);
+  }
+}
