@@ -85,6 +85,16 @@ a {
   font-family: var(--font-family-accent);
 }
 
+.description {
+  display: grid;
+  margin: 0;
+  row-gap: var(--paragraphOffset);
+
+  p {
+    margin: 0;
+  }
+}
+
 .link {
   color: inherit;
   transition-duration: var(--transition-duration);
