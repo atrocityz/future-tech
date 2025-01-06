@@ -28,6 +28,6 @@
 @use './blocks/blog-actions';
 @use './blocks/blog-card';
 
-.header, .footer, main > *:not(:last-child) {
-  display: none;
-}
+//.header, .footer, main > *:not(:last-child) {
+//  display: none;
+//}
