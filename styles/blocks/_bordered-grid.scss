@@ -23,7 +23,7 @@
 
     @include tablet-above {
       .bordered-grid__item {
-        /**
+        /*
           1-ый и 2-ой элементы в колонке
         */
         &:nth-child(3n - 2),
@@ -32,14 +32,23 @@
           padding-right: var(--itemPaddingX);
         }
 
-        /**
+        /*
           2-ой элементы в колонке
         */
         &:nth-child(3n - 1) {
           @include full-vw-centered-line(bottom)
         }
 
-        /**
+        /*
+          Убираем нижнее подчеркивание у последнего элемента во 2-ом столбце
+        */
+        &:nth-last-child(2), &:last-child {
+          &::before {
+            height: 0;
+          }
+        }
+
+        /*
           2-ой и 3-ий элементы в колонке
         */
         &:nth-child(3n - 1),
