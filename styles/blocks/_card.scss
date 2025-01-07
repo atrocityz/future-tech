@@ -92,6 +92,18 @@
       @include mobile-above {
         grid-template-columns: auto 1fr;
       }
+
+      .card__cell {
+        row-gap: rem(4);
+
+        @include laptop {
+          row-gap: rem(2);
+        }
+
+        .card__cell-title {
+          @include fluid-text(20, 16);
+        }
+      }
     }
   }
 
@@ -100,14 +112,6 @@
     flex-direction: column;
     justify-content: start;
     row-gap: fluid(20, 4);
-
-    &--small-gap {
-      row-gap: rem(4);
-
-      @include laptop {
-        row-gap: rem(2);
-      }
-    }
 
     &:has(> *:only-child) {
       justify-content: center;
@@ -153,8 +157,4 @@
       grid-template-columns: 1fr auto;
     }
   }
-}
-
-.card__grid--2-cols-alt > .card__cell > .card__cell-title {
-  @include fluid-text(20, 16)
 }

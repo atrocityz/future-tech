@@ -1,18 +1,20 @@
 @use '../helpers' as *;
 
 .person-card {
+  --photoSize: #{rem(80)};
+
   display: flex;
   column-gap: fluid(16, 8);
   align-items: center;
 
+  @include laptop {
+    --photoSize: #{rem(60)};
+  }
+
   &__img {
     border-radius: 50%;
-    width: rem(80);
+    width: var(--photoSize);
     background-color: var(--color-dark-15);
-
-    @include laptop {
-      width: rem(60);
-    }
   }
 
   &__body {
