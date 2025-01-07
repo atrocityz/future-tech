@@ -15,7 +15,7 @@
   --color-accent: #ffd11a;
   --color-red: #ff5500;
 
-  --gradient: linear-gradient(45deg,var(--color-dark-15) 64%,var(--color-accent) 136%);
+  --gradient: linear-gradient(45deg, var(--color-dark-15) 64%, var(--color-accent) 136%);
 
   --border: #{rem(1)} solid var(--color-dark-15);
   --border-light: #{rem(1)} solid var(--color-dark-20);
@@ -24,6 +24,8 @@
 
   --font-family-base: 'Inter', sans-serif;
   --font-family-accent: 'Kumbh Sans', sans-serif;
+
+  --100vw: calc(100vw - var(--scrollbar-width));
 
   --container-width: #{rem(1600)};
   --container-padding-x: #{rem(16)};
