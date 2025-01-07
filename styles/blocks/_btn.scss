@@ -32,4 +32,8 @@
     color: var(--color-dark);
     background-color: var(--color-accent);
   }
+
+  &--light {
+    background-color: var(--color-dark-10);
+  }
 }

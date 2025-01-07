@@ -6,7 +6,7 @@
     grid-template-columns: 37.5% auto;
   }
 
-  &__preview,&__body {
+  &__preview, &__body {
     padding: rem(80);
 
     @include laptop {
@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 0;
-    row-gap: fluid(60,20);
+    row-gap: fluid(60, 20);
 
     @include tablet-above {
       border-right: var(--border);
@@ -33,24 +33,28 @@
 
     &-main {
       display: grid;
-      row-gap: fluid(50,20);
+      row-gap: fluid(50, 20);
 
       @include tablet-above {
         max-width: rem(509);
       }
+
+      @include tablet {
+        justify-content: start;
+      }
     }
 
     &-icon {
-      width: fluid(80,50);
+      width: fluid(80, 50);
     }
 
     &-info {
       display: grid;
-      row-gap: fluid(16,6);
+      row-gap: fluid(16, 6);
     }
 
     &-title {
-      @include fluid-text(40,24);
+      @include fluid-text(40, 24);
     }
 
     &-description {
@@ -62,7 +66,7 @@
     padding-right: 0;
 
     @include tablet {
-      padding: rem(30) rem(16);
+      padding: rem(30) 0;
     }
   }
 
@@ -71,26 +75,86 @@
 
     &--2-cols {
       grid-template-columns: repeat(2, 1fr);
-      gap: fluid(30,10);
+      gap: fluid(30, 10);
 
       @include mobile {
         grid-template-columns: 1fr;
       }
     }
+
+    &--2-cols-alt {
+      gap: rem(30) rem(20);
+
+      @include laptop {
+        gap: rem(24) rem(16);
+      }
+
+      @include mobile-above {
+        grid-template-columns: auto 1fr;
+      }
+    }
   }
-  
+
   &__cell {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    row-gap: fluid(20,4);
+    row-gap: fluid(20, 4);
+
+    &--small-gap {
+      row-gap: rem(4);
+
+      @include laptop {
+        row-gap: rem(2);
+      }
+    }
+
+    &:has(> *:only-child) {
+      justify-content: center;
+    }
+
+    &-wide {
+      grid-column: -1 / 1;
+    }
 
     &-title {
-      @include fluid-text(24,18);
+      @include fluid-text(24, 18);
+    }
+
+    &-subtitle {
+      margin: 0;
+    }
+
+    &-link {
+      grid-area: link;
     }
 
     &-description {
       color: var(--color-gray-60);
     }
+
+    &-img {
+      border-radius: rem(12);
+      width: 100%;
+      height: fluid(332, 169);
+
+      @include laptop {
+        border-radius: rem(10);
+      }
+    }
+
+    &:has(&-link) {
+      display: grid;
+      column-gap: rem(20);
+      align-items: center;
+      grid-template-areas:
+        'other link'
+        'other link';
+      grid-template-columns: 1fr auto;
+    }
   }
+}
+
+.card__grid--2-cols-alt > .card__cell > .card__cell-title {
+  @include fluid-text(20, 16)
 }
