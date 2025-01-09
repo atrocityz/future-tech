@@ -85,6 +85,12 @@ a {
   font-family: var(--font-family-accent);
 }
 
+.title--section {
+  @include fluid-text(58, 28);
+
+  line-height: 130%;
+}
+
 .description {
   display: grid;
   margin: 0;
@@ -126,7 +132,7 @@ a {
     &::before {
       @include abs-center;
       @include square(rem(44));
-      
+
       content: "";
     }
   }

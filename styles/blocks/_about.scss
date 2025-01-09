@@ -1,0 +1,96 @@
+@use '../helpers' as *;
+
+.about {
+  border-bottom: var(--border);
+  background-color: var(--color-dark-10);
+  padding-block: fluid(120, 40);
+
+  &__inner {
+    display: grid;
+    row-gap: fluid(100, 40);
+  }
+
+  &__header {
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+      'icon info'
+      'icon description';
+    grid-template-columns: auto 1fr;
+    gap: rem(30) fluid(80, 20);
+
+    @include laptop {
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      grid-template-areas:
+        'icon subtitle'
+        'title title'
+        'description description';
+      row-gap: rem(4);
+    }
+  }
+
+  &__icon {
+    grid-area: icon;
+    width: fluid(150, 60);
+  }
+
+  &__info {
+    display: grid;
+    grid-area: info;
+    row-gap: rem(16);
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__subtitle {
+    @include fluid-text(20, 14);
+
+    justify-self: start;
+    margin: 0;
+
+    @include mobile {
+      grid-area: subtitle;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      grid-area: title;
+      margin-top: rem(20);
+    }
+  }
+
+  &__description {
+    @include mobile {
+      grid-area: description;
+    }
+  }
+
+  &__list {
+    display: grid;
+    border: var(--border);
+    border-radius: rem(12);
+    padding: rem(20);
+    background-color: var(--color-dark);
+    gap: rem(20);
+
+    @include laptop {
+      border-radius: rem(10);
+      padding: rem(10);
+      gap: rem(10);
+    }
+
+    @include mobile-above {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

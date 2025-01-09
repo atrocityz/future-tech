@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .advantages-card {
-  display:grid;
+  display: grid;
   row-gap: rem(30);
 
   @include laptop {
@@ -27,44 +27,17 @@
   }
 
   &__link {
-    --circleSize: #{rem(52)};
-    --circleMarginLeft: #{rem(20)};
-
-    position: relative;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-right: calc(var(--circleMarginLeft) + var(--circleSize));
     row-gap: rem(4);
 
     @include laptop {
-      --circleMarginLeft: #{rem(14)};
-      --circleSize: #{rem(44)};
-
-
       row-gap: rem(2);
-    }
-
-    @include mobile {
-      --circleSize: #{rem(40)};
-    }
-
-    &::after {
-      @include square(var(--circleSize));
-      @include abs-y;
-
-      content: "";
-      right: 0;
-      border-radius: 50%;
-      background-image: url('../../icons/arrow-top-right-black.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: var(--color-accent);
     }
   }
 
   &__title {
-    @include fluid-text(20,16)
+    @include fluid-text(20, 16)
   }
 
   &__subtitle {

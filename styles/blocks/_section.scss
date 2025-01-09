@@ -32,12 +32,6 @@
     }
   }
 
-  &__title {
-    @include fluid-text(58, 28);
-
-    line-height: 130%;
-  }
-
   &__subtitle {
     justify-self: start;
     margin: 0;
