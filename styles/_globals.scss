@@ -1,5 +1,11 @@
 @use 'helpers' as *;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .page {
   height: 100%;
   font-family: var(--font-family-base);
