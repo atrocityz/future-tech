@@ -16,7 +16,6 @@
   }
 
   &__promo {
-    border-bottom: var(--border);
     text-align: center;
     background-color: var(--color-dark);
     padding-block: rem(20);
@@ -34,6 +33,7 @@
 
   &__body {
     background-color: var(--color-dark-10);
+    border-block: var(--border);
     padding-block: rem(24);
 
     @include mobile {
@@ -113,7 +113,7 @@
 
   &__contacts {
     @include mobile {
-      align-self:center;
+      align-self: center;
       width: 100%;
       max-width: rem(150);
     }
