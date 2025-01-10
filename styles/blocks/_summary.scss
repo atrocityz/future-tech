@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.summary {
+  &__list {
+    display: flex;
+    column-gap: fluid(50, 20);
+    align-items: start;
+    margin: 0;
+  }
+
+  &__item {
+    display: grid;
+    row-gap: rem(4);
+
+    @include laptop {
+      row-gap: rem(2);
+    }
+  }
+
+  &__value {
+    margin: 0;
+    color: var(--color-light);
+  }
+}

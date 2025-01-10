@@ -33,7 +33,12 @@
 @use './blocks/review-card';
 @use './blocks/about-card';
 @use './blocks/about';
+@use './blocks/hero-alt';
+@use './blocks/summary';
+@use './blocks/news-card';
+@use './blocks/news';
 
-//.header, .footer, main > *:not(:last-child) {
-//  display: none;
-//}
+
+.header, .footer, main > *:not(:last-child) {
+  display: none;
+}
