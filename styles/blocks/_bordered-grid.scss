@@ -11,6 +11,41 @@
 
   &--2-cols {
     --columns: 2;
+    --itemPaddingX: #{rem(80)};
+
+    @include laptop {
+      --itemPaddingX: #{rem(50)};
+    }
+
+    @include mobile-above {
+      .bordered-grid__item {
+        &:nth-child(odd) {
+          border-right: var(--border);
+          padding-right: var(--itemPaddingX);
+        }
+
+        &:nth-child(even) {
+          padding-left: var(--itemPaddingX);
+        }
+
+        &:nth-child(even):not(:last-child) {
+          @include full-vw-centered-line(
+              bottom,
+              auto,
+              100%,
+              50%
+          );
+        }
+      }
+    }
+
+    @include mobile {
+      --columns: 1;
+
+      .bordered-grid__item:not(:last-child) {
+        border-bottom: var(--border);
+      }
+    }
   }
 
   &--3-cols {
