@@ -31,7 +31,7 @@
   &::before,
   &::after {
     position: absolute;
-    width: var(--100vw);
+    width: calc((var(--100vw) - var(--container-width)) / 2);
     height: rem(1);
     background-color: var(--color-dark-15);
   }
