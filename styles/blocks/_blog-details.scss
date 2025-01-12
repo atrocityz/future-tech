@@ -106,15 +106,15 @@
 
     .title {
       &:not(:first-child) {
-        --marginTop: calc(1.5em - var(--rowGap));
+        --marginTop: 1.5em;
 
-        margin-top: var(--marginTop);
+        margin-top: calc(var(--marginTop) - var(--rowGap));
       }
 
       &:not(:last-child) {
-        --marginBottom: calc(1em - var(--rowGap));
+        --marginBottom: 1em;
 
-        margin-bottom: var(--marginBottom);
+        margin-top: calc(var(--marginBottom) - var(--rowGap));
       }
     }
 
