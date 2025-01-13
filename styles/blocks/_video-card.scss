@@ -1,7 +1,10 @@
 @use '../helpers' as *;
 
 .video-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
   row-gap: rem(30);
 
   @include laptop {
@@ -10,6 +13,7 @@
 
   &__body {
     display: grid;
+    flex-grow: 1;
     row-gap: fluid(10, 4);
   }
 
@@ -19,5 +23,17 @@
 
   &__description {
     color: var(--color-gray-60);
+  }
+
+  &__link {
+    max-width: rem(201);
+
+    @include laptop {
+      max-width: rem(157);
+    }
+
+    @include mobile-s {
+      max-width: 100%;
+    }
   }
 }

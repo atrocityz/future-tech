@@ -3,6 +3,7 @@
 .rating-view {
   display: inline-flex;
   column-gap: rem(7);
+  align-items: center;
   border: var(--border);
   border-radius: rem(100);
   padding: rem(10) rem(16);
