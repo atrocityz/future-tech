@@ -1,9 +1,47 @@
 @use '../helpers' as *;
 
 .metrics {
+  --columns: 3;
+
+  &--4-cols {
+    --columns: 4;
+
+    @include tablet {
+      --columns: 2;
+    }
+
+    .metrics__item {
+      align-items: center;
+      justify-content: center;
+
+      @include tablet-above {
+        &:nth-child(4n) {
+          padding-right: 0;
+        }
+      }
+
+      @include tablet {
+        &:nth-child(odd) {
+          padding-left: 0;
+        }
+
+        &:nth-child(even) {
+          border-right: none;
+          padding-right: 0;
+        }
+
+        &:nth-child(2n) {
+          &:not(:last-child) {
+            @include full-vw-centered-line(bottom, 0);
+          }
+        }
+      }
+    }
+  }
+
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(var(--columns), 1fr);
     margin: 0;
   }
 
@@ -34,7 +72,11 @@
   }
 
   &__value {
-    @include fluid-text(40,24);
+    @include fluid-text(40, 24);
+
+    &--large {
+      @include fluid-text(60, 24);
+    }
 
     &-sign {
       color: var(--color-accent);
