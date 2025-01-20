@@ -112,6 +112,12 @@
   }
 
   &__contacts {
+    padding: rem(14) rem(20);
+
+    @include tablet {
+      padding: rem(10) rem(14);
+    }
+
     @include mobile {
       align-self: center;
       width: 100%;

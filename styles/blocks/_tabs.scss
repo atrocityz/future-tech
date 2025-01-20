@@ -26,19 +26,29 @@
     &--compact {
       display: inline-flex;
       column-gap: rem(10);
-      border-right: rem(10);
+      border: var(--border);
+      border-radius: rem(10);
       padding: rem(10);
       background-color: var(--color-dark);
+
+      @include mobile-s {
+        width: 100%;
+      }
 
       .tabs__button {
         padding: rem(18);
 
         &.is-active {
+          font-weight: 400;
           background-color: var(--color-dark-15);
         }
 
         @include laptop {
           padding: rem(14);
+        }
+
+        @include mobile-s {
+          width: 100%;
         }
       }
     }
