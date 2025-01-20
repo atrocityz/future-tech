@@ -1,0 +1,21 @@
+@use '../helpers' as *;
+
+.title {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-light);
+}
+
+.title--bold {
+  font-weight: 600;
+}
+
+.title--accent {
+  font-family: var(--font-family-accent);
+}
+
+.title--section {
+  @include fluid-text(58, 28);
+
+  line-height: 130%;
+}

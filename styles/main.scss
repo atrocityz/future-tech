@@ -44,6 +44,9 @@
 @use './blocks/blog-details';
 @use './blocks/report-card';
 
+// Important utils
+@use './blocks/title';
+
 
 //.header, .footer, main > *:not(:last-child) {
 //  display: none;
