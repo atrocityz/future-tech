@@ -1,0 +1,76 @@
+@use '../helpers' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: rem(16);
+
+  @include laptop {
+    font-size: rem(16);
+    row-gap: rem(12);
+  }
+
+  &__label {
+    font-size: rem(18);
+    letter-spacing: 0;
+    cursor: pointer;
+
+    @include laptop {
+      font-size: rem(16);
+    }
+  }
+
+  &__required-star {
+    color: var(--color-red);
+  }
+
+  &__control {
+    border: var(--border);
+    border-radius: rem(8);
+    width: 100%;
+    height: rem(67);
+    color: var(--color-light);
+    background-color: var(--color-dark-10);
+    padding-inline: rem(20);
+
+    @include laptop {
+      border-radius: rem(6);
+      height: rem(53);
+      padding-inline: rem(16);
+    }
+
+    @include hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--box-shadow);
+    }
+
+    &::placeholder {
+      color: var(--color-dark-40);
+    }
+  }
+
+  &__body {
+    display: flex;
+    column-gap: rem(16);
+    width: 100%;
+
+    @include laptop {
+      column-gap: rem(12);
+    }
+  }
+
+  textarea.field__control {
+    min-height: rem(163);
+    resize: vertical;
+    padding-block: rem(20);
+
+    @include laptop {
+      padding-block: rem(16);
+    }
+
+    @include mobile {
+      min-height: rem(127);
+    }
+  }
+}

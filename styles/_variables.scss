@@ -20,6 +20,8 @@
   --border: #{rem(1)} solid var(--color-dark-15);
   --border-light: #{rem(1)} solid var(--color-dark-20);
 
+  --box-shadow: 0 0 0 #{rem(4)} #191919;
+
   --paragraphOffset: #{rem(10)};
 
   --font-family-base: 'Inter', sans-serif;

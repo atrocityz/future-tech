@@ -65,6 +65,8 @@
     }
 
     &-link {
+      cursor: pointer;
+
       @include tablet {
         max-width: rem(358);
       }
@@ -76,6 +78,11 @@
 
     @include tablet {
       padding: rem(30) 0;
+    }
+
+    &:has(.accordion-group) {
+      display: grid;
+      row-gap: rem(20);
     }
   }
 
@@ -221,7 +228,7 @@
 
     &:not(.tile) {
       row-gap: fluid(14, 10);
-      
+
       @include mobile-s {
         grid-template: initial;
 

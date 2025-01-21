@@ -43,11 +43,14 @@
 @use './blocks/table-of-contents';
 @use './blocks/blog-details';
 @use './blocks/report-card';
+@use './blocks/contacts-card';
+@use './blocks/field';
+@use './blocks/select';
+@use './blocks/checkbox';
+@use './blocks/feedback-form';
+@use './blocks/accordion-group';
+@use './blocks/accordion';
+@use './blocks/contacts';
 
 // Important utils
 @use './blocks/title';
-
-
-//.header, .footer, main > *:not(:last-child) {
-//  display: none;
-//}
