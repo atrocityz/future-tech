@@ -24,10 +24,21 @@
       padding-block: rem(14);
     }
 
+    @include mobile-s {
+      font-size: rem(12);
+      text-align: start;
+    }
+
     &-link {
       font-weight: 400;
       letter-spacing: -0.03em;
       color: var(--color-gray-60);
+
+      .icon {
+        @include mobile-s {
+          column-gap: rem(1);
+        }
+      }
     }
   }
 
